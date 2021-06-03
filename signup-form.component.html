@@ -1,0 +1,47 @@
+<div class="card" style=" margin-left: 400px;  margin-right:400px;" >
+  <form  style="border:1px solid #ccc">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <div class="form-group">
+          <label for="email" ><b>Email</b></label>
+          <input ngModel type="text" class="form-control" placeholder="Enter Email"  id='email' name="email" #email="ngModel"  required>
+          <div class="alert alert-danger" *ngIf='!email.valid && email.touched'>
+              Email is required
+          </div>
+          
+          <label for="psw"><b>Password</b></label>
+          <input ngModel type="password" class="form-control" placeholder="Enter Password"   name="psw" #psw="ngModel" required>
+          <div class="alert alert-danger" *ngIf='!psw.valid && psw.touched' > 
+            Password is required
+          </div>
+      
+          <label for="psw_repeat"><b>Confirm Password</b></label>
+          <input type="password" class="form-control" placeholder="Repeat Password" ngModel name="psw_repeat" #psw_repeat="ngModel" required>
+          <div class="alert alert-danger" *ngIf='!psw_repeat.valid && psw_repeat.touched'>
+            Repeat Password is required
+          </div>
+
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" ngModel name="name" #name="ngModel" required>
+          <div class="alert alert-danger" *ngIf='!name.valid && name.touched'>
+            Name is required
+          </div> 
+
+          <label for="job"><b>Job_Category</b></label>
+          <input type="text" class="form-control" placeholder="Enter Job" ngModel name="job" #job="ngModel" required>
+          <div class="alert alert-danger" *ngIf='!job.valid && job.touched'>
+            Job Category is required
+          </div>
+            
+          <label for="exp"><b>Exp_level</b></label>
+          <input type="text" class="form-control" placeholder="Enter exp_level" ngModel name="exp" #exp="ngModel" required>
+          <div class="alert alert-danger" *ngIf='!exp.valid && exp.touched'>
+            Experience is required
+          </div>
+      </div>  
+      <div class="clearfix" style="margin-left: 270px; ">
+          <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
